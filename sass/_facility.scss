@@ -1,0 +1,46 @@
+@use 'mixin';
+
+.facilitytitle{
+    @include mixin.h2size;
+    margin-bottom: 50px;
+}
+.facilitytitle::after{
+    @include mixin.h2after;
+}
+.facilitytitle::before{
+    @include mixin.h2before;
+}
+.facilitycontainer{
+    dl{
+        padding: 20px 20px 20px 20px;
+        border-bottom: 0.5px solid white;
+        display: flex;
+        @include mixin.tab {
+            flex-direction: column;
+        }
+        dt{
+            display: flex;
+            font-size: 2.5em;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include mixin.tab {
+                width: 100%;
+                justify-content: start;
+            }
+        }
+        dd {
+            line-height: 3;
+            font-size: 1.6em;
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include mixin.tab {
+                width: 100%;
+                justify-content: start;
+            }
+        }
+    }
+}

@@ -1,0 +1,1258 @@
+@charset "UTF-8";
+body {
+  font-size: 62.5%;
+  font-family: "Zen Old Mincho", serif;
+  color: white;
+  background-color: black;
+}
+
+.breadth {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  margin-bottom: 100px;
+}
+header .right-col {
+  background-color: black;
+  position: fixed;
+  display: flex;
+  left: 5%;
+  bottom: 5%;
+  z-index: 500;
+  font-size: 2em;
+}
+header .right-col p {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+header .right-col p:first-child {
+  border-right: 1px solid white;
+}
+header .right-col p:last-child:hover {
+  color: #AC881B;
+  cursor: pointer;
+}
+header .rap {
+  padding: 1%;
+  width: 100vw;
+  position: fixed;
+  align-items: center;
+  z-index: 240;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+header .rap .smalllogo {
+  max-width: 100px;
+  max-height: 100px;
+}
+header .rap .smalllogo img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 550px) {
+  header .rap nav {
+    display: none;
+  }
+}
+header .rap nav ul {
+  font-size: 2em;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100px;
+}
+header .rap nav ul li {
+  list-style: none;
+  margin-left: 20px;
+  font-size: 1.2em;
+}
+header .rap nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+header .rap nav ul li a:hover {
+  color: #AC881B;
+}
+header .rap nav ul li:last-child {
+  margin-right: 20px;
+}
+header .logo {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+}
+header .logo img {
+  width: 100%;
+  height: 100%;
+}
+header .opaque {
+  background-color: black;
+  opacity: 0.6;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 120;
+}
+header #vegas {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+header #guestroom {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+header #cuisine {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+header .facility_visal {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+header .facility_visal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+header .facility {
+  font-size: 10em;
+  display: inline-block;
+  position: absolute;
+  z-index: 130;
+  text-orientation: upright;
+  writing-mode: vertical-rl;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 3%;
+  letter-spacing: 30px;
+}
+@media screen and (max-width: 550px) {
+  header .facility {
+    top: 30%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+header .facility::after {
+  margin-top: 50px;
+  content: "";
+  width: 1px;
+  height: 200px;
+  background-color: white;
+  display: inline-block;
+  position: absolute;
+  top: 80%;
+  right: 50%;
+  transform: translateX(-50%);
+  animation: faciltyanime 3s infinite;
+}
+
+@keyframes faciltyanime {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 200px;
+  }
+}
+.dark {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  position: fixed;
+  z-index: 230;
+  display: none;
+}
+
+.dark.active {
+  display: block; /* クラスが付いたときに表示 */
+}
+
+.spannavi {
+  text-align: center;
+  font-size: 1.9em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  transition: transform 2s ease-in;
+  display: none;
+}
+
+.active.spannavi {
+  display: block;
+}
+
+.spannavi ul {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.spannavi ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.spannavi ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.spannavi ul li::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 10%;
+  height: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+  background-color: white;
+}
+
+.spannavi ul li::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 10%;
+  height: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
+  background-color: white;
+}
+
+button {
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 90vw;
+  color: #AC881B;
+  border: 1px solid white;
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 250;
+  top: 7%;
+  right: 5%;
+  width: 35px;
+  height: 35px;
+  display: none;
+}
+@media screen and (max-width: 550px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  border-radius: 4px;
+  display: inline-block;
+  transition: all 0.5s;
+  box-sizing: border-box;
+  transition: 2 ease-in;
+}
+
+.hamburger span:first-child {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 50%;
+}
+
+.hamburger span:last-child {
+  bottom: 0;
+}
+
+.hamburger.active span:first-child {
+  -webkit-transform: translateY(15px) rotate(-310deg);
+  transform: translateY(15px) rotate(-310deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transition: 0.5s ease-in;
+}
+
+.hamburger.active span:last-child {
+  -webkit-transform: translateY(-19.5px) rotate(310deg);
+  transform: translateY(-19.5px) rotate(310deg);
+}
+
+.indexcontainer {
+  max-height: 2000px;
+  width: 100vw;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.indexcontainer .origin {
+  writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+@media screen and (max-width: 550px) {
+  .indexcontainer .origin {
+    writing-mode: horizontal-tb;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+.indexcontainer .origin .indextext {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  animation: indextext 6.5s linear forwards, blurEffect 6.5s linear forwards;
+  writing-mode: vertical-rl;
+  line-height: 2.5;
+  font-size: calc(0.5em + 2vw);
+}
+@media screen and (max-width: 550px) {
+  .indexcontainer .origin .indextext {
+    writing-mode: horizontal-tb;
+  }
+}
+.indexcontainer .origin .indextitle {
+  width: 5%;
+  height: 400px;
+  font-size: 5em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 800px) {
+  .indexcontainer .origin .indextitle {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .indexcontainer .origin .indextitle {
+    width: 90%;
+    height: auto;
+    writing-mode: horizontal-tb;
+    font-size: 2.9em;
+  }
+}
+.indexcontainer::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/夕日.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(2px) brightness(0.8);
+  z-index: -1;
+}
+@media screen and (max-width: 550px) {
+  .indexcontainer::before {
+    border-radius: 50%;
+    height: 100vw;
+    aspect-ratio: 1/1;
+  }
+}
+
+@keyframes indextext {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 110%;
+  }
+}
+@keyframes blurEffect {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.facilitytitle {
+  margin: 2%;
+  max-width: 350px;
+  font-size: 5em;
+  margin: 0 auto;
+  display: flex;
+  /* 子要素の整列を簡単にする */
+  align-items: center;
+  /* 垂直方向の中央揃え */
+  justify-content: center;
+  /* 必要に応じてテキストを中央揃え */
+  position: relative;
+  color: #AC881B;
+  margin-bottom: 200px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 800px) {
+  .facilitytitle {
+    font-size: 3em;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .facilitytitle {
+    margin-bottom: 50px;
+  }
+}
+
+.facilitytitle::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 1px;
+  background-color: white;
+}
+
+.facilitytitle::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 1px;
+  background-color: white;
+}
+
+.facilitycontainer dl {
+  padding: 20px 20px 20px 20px;
+  border-bottom: 0.5px solid white;
+  display: flex;
+}
+@media screen and (max-width: 800px) {
+  .facilitycontainer dl {
+    flex-direction: column;
+  }
+}
+.facilitycontainer dl dt {
+  display: flex;
+  font-size: 2.5em;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .facilitycontainer dl dt {
+    width: 100%;
+    justify-content: start;
+  }
+}
+.facilitycontainer dl dd {
+  line-height: 3;
+  font-size: 1.6em;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 800px) {
+  .facilitycontainer dl dd {
+    width: 100%;
+    justify-content: start;
+  }
+}
+
+.guestroomtitle {
+  margin: 2%;
+  max-width: 350px;
+  font-size: 5em;
+  margin: 0 auto;
+  display: flex;
+  /* 子要素の整列を簡単にする */
+  align-items: center;
+  /* 垂直方向の中央揃え */
+  justify-content: center;
+  /* 必要に応じてテキストを中央揃え */
+  position: relative;
+  color: #AC881B;
+  margin-bottom: 200px;
+}
+@media screen and (max-width: 800px) {
+  .guestroomtitle {
+    font-size: 3em;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .guestroomtitle {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .guestroomtitle {
+    margin-bottom: 150px;
+  }
+}
+
+.guestroomtitle::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 1px;
+  background-color: white;
+}
+
+.guestroomtitle::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 1px;
+  background-color: white;
+}
+
+.guestroomcontainer .humoto {
+  margin-bottom: 100px;
+  position: relative;
+}
+.guestroomcontainer .humoto__inner {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.guestroomcontainer .humoto__inner--image {
+  opacity: 0;
+  transition: opacity 5s ease, transform 5s ease;
+  transform: translateX(-200px);
+  visibility: hidden;
+  z-index: 10;
+  width: 70%;
+  height: 60%;
+  margin-bottom: 400px;
+}
+@media screen and (max-width: 800px) {
+  .guestroomcontainer .humoto__inner--image {
+    width: 100%;
+    margin-bottom: 350px;
+  }
+}
+.guestroomcontainer .humoto__inner--image img {
+  width: 100%;
+  height: auto;
+}
+.guestroomcontainer .humoto__inner--photo {
+  opacity: 0;
+  transition: opacity 5s ease, transform 5s ease;
+  transform: translateX(-200px);
+  visibility: hidden;
+  z-index: 10;
+  width: 70%;
+  height: 60%;
+  margin-bottom: 400px;
+}
+@media screen and (max-width: 800px) {
+  .guestroomcontainer .humoto__inner--photo {
+    width: 100%;
+    margin-bottom: 350px;
+  }
+}
+.guestroomcontainer .humoto__inner--photo img {
+  width: 100%;
+  height: auto;
+}
+.guestroomcontainer .humoto__inner--picture {
+  opacity: 0;
+  transition: opacity 5s ease, transform 5s ease;
+  transform: translateX(-200px);
+  visibility: hidden;
+  z-index: 10;
+  width: 70%;
+  height: 60%;
+  margin-bottom: 400px;
+}
+@media screen and (max-width: 800px) {
+  .guestroomcontainer .humoto__inner--picture {
+    width: 100%;
+    margin-bottom: 350px;
+  }
+}
+.guestroomcontainer .humoto__inner--picture img {
+  width: 100%;
+  height: auto;
+}
+.guestroomcontainer .humoto__inner .is-active {
+  /*要素を表示させる*/
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.guestroomcontainer .humoto__inner--text {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+}
+@media screen and (max-width: 800px) {
+  .guestroomcontainer .humoto__inner--text {
+    width: 100%;
+    height: 50%;
+    top: -10%;
+    left: 0;
+  }
+}
+.guestroomcontainer .humoto__inner--text img {
+  width: 45%;
+  position: absolute;
+  right: 0;
+}
+@media screen and (max-width: 800px) {
+  .guestroomcontainer .humoto__inner--text img {
+    width: 100%;
+    height: 70%;
+  }
+}
+.guestroomcontainer .humoto__inner--description {
+  position: absolute;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+}
+@media screen and (max-width: 800px) {
+  .guestroomcontainer .humoto__inner--description {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 800px) {
+  .guestroomcontainer .humoto__inner--description-d {
+    width: 100%;
+    margin-bottom: 50px;
+    font-size: 0.85em;
+  }
+}
+.guestroomcontainer .humoto__inner--description-d h3 {
+  font-size: 4em;
+  margin-top: 25px;
+  margin-bottom: 70px;
+}
+@media screen and (max-width: 800px) {
+  .guestroomcontainer .humoto__inner--description-d h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 3em;
+  }
+}
+.guestroomcontainer .humoto__inner--description-d .itadaki::after {
+  margin-left: 20px;
+  content: "いただき";
+  display: inline;
+  font-size: 0.5em;
+}
+.guestroomcontainer .humoto__inner--description-d .touge::after {
+  margin-left: 20px;
+  content: "とうげ";
+  display: inline;
+  font-size: 0.5em;
+}
+.guestroomcontainer .humoto__inner--description-d .humoto::after {
+  margin-left: 20px;
+  content: "ふもと";
+  display: inline;
+  font-size: 0.5em;
+}
+.guestroomcontainer .humoto__inner--description-d p {
+  font-size: 1.9em;
+}
+@media screen and (max-width: 800px) {
+  .guestroomcontainer .humoto__inner--description-d p {
+    margin-bottom: 10px;
+  }
+}
+.guestroomcontainer .humoto__inner--description-booking {
+  width: 300px;
+  cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+  .guestroomcontainer .humoto__inner--description-booking {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+.guestroomcontainer .humoto__inner--description-booking p {
+  color: #AC881B;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  width: 100%;
+  border: 1px solid white;
+  font-size: 2em;
+}
+.guestroomcontainer .humoto__inner--description-booking:hover {
+  background-color: #fff;
+}
+
+.cuisinecontainer {
+  margin-bottom: 200px;
+}
+.cuisinecontainer .title {
+  margin: 2%;
+  max-width: 350px;
+  font-size: 5em;
+  margin: 0 auto;
+  display: flex;
+  /* 子要素の整列を簡単にする */
+  align-items: center;
+  /* 垂直方向の中央揃え */
+  justify-content: center;
+  /* 必要に応じてテキストを中央揃え */
+  position: relative;
+  color: #AC881B;
+  margin-bottom: 200px;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .title {
+    font-size: 3em;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cuisinecontainer .title {
+    margin-bottom: 50px;
+  }
+}
+.cuisinecontainer .title::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 1px;
+  background-color: white;
+}
+.cuisinecontainer .title::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 1px;
+  background-color: white;
+}
+.cuisinecontainer .secondtitle {
+  max-width: 700px;
+  font-size: 5em;
+  margin: 0 auto;
+  display: flex;
+  /* 子要素の整列を簡単にする */
+  align-items: center;
+  /* 垂直方向の中央揃え */
+  justify-content: center;
+  /* 必要に応じてテキストを中央揃え */
+  position: relative;
+  color: #AC881B;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .secondtitle {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cuisinecontainer .secondtitle {
+    font-size: 2.7em;
+  }
+}
+.cuisinecontainer .secondtitle::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 1px;
+  background-color: white;
+}
+.cuisinecontainer .secondtitle::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 1px;
+  background-color: white;
+}
+.cuisinecontainer .breakfast {
+  position: relative;
+  margin-bottom: 300px;
+  max-height: 900px;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast {
+    margin-bottom: 200px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cuisinecontainer .breakfast {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .cuisinecontainer .breakfast {
+    margin-bottom: 600px;
+  }
+}
+.cuisinecontainer .breakfast__back {
+  width: 65vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 8%;
+  filter: blur(3px);
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__back {
+    top: 40%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cuisinecontainer .breakfast__back {
+    top: 30%;
+  }
+}
+.cuisinecontainer .breakfast__back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.cuisinecontainer .breakfast__inner {
+  width: 55%;
+  height: 50%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__inner {
+    width: 90%;
+    position: relative;
+  }
+}
+.cuisinecontainer .breakfast__inner img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+.cuisinecontainer .breakfast__fish {
+  width: 55%;
+  height: 50%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__fish {
+    width: 90%;
+    position: relative;
+  }
+}
+.cuisinecontainer .breakfast__fish img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+.cuisinecontainer .breakfast__pork {
+  width: 55%;
+  height: 50%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__pork {
+    width: 90%;
+    position: relative;
+  }
+}
+.cuisinecontainer .breakfast__pork img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+.cuisinecontainer .breakfast .is-active {
+  opacity: 1;
+}
+.cuisinecontainer .breakfast__out {
+  display: flex;
+  max-height: 50%;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__out {
+    display: block;
+  }
+}
+.cuisinecontainer .breakfast__out--text {
+  text-align: center;
+  align-content: center;
+  width: 41%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__out--text {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cuisinecontainer .breakfast__out--text {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cuisinecontainer .breakfast__out--text {
+    margin-bottom: 100px;
+  }
+}
+.cuisinecontainer .breakfast__out--text h3 {
+  font-size: 4em;
+  margin-top: 25px;
+  margin-bottom: 70px;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__out--text h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__out--text h3 {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cuisinecontainer .breakfast__out--text h3 {
+    font-size: 3.3em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cuisinecontainer .breakfast__out--text h3 {
+    font-size: 2.7em;
+  }
+}
+.cuisinecontainer .breakfast__out--text p {
+  font-size: 1.8em;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__out--text p {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cuisinecontainer .breakfast__out--text p {
+    width: 70%;
+    font-size: 1.4em;
+  }
+}
+.cuisinecontainer .breakfast__out--image {
+  width: 55%;
+  height: 100%;
+  vertical-align: bottom;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__out--image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 40%;
+    height: 30%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cuisinecontainer .breakfast__out--image {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 40%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cuisinecontainer .breakfast__out--image {
+    top: 25%;
+  }
+}
+.cuisinecontainer .breakfast__out--image img {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__out--image img {
+    margin-top: 0px;
+  }
+}
+.cuisinecontainer .breakfast__out--pork {
+  width: 55%;
+  height: 100%;
+  vertical-align: bottom;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__out--pork {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 40%;
+    height: 30%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cuisinecontainer .breakfast__out--pork {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 40%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cuisinecontainer .breakfast__out--pork {
+    top: 25%;
+  }
+}
+.cuisinecontainer .breakfast__out--pork img {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__out--pork img {
+    margin-top: 0px;
+  }
+}
+.cuisinecontainer .breakfast__out--fish {
+  width: 55%;
+  height: 100%;
+  vertical-align: bottom;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__out--fish {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 40%;
+    height: 30%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cuisinecontainer .breakfast__out--fish {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 40%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cuisinecontainer .breakfast__out--fish {
+    top: 25%;
+  }
+}
+.cuisinecontainer .breakfast__out--fish img {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .breakfast__out--fish img {
+    margin-top: 0px;
+  }
+}
+.cuisinecontainer .breakfast__out .is-active {
+  opacity: 1;
+}
+.cuisinecontainer .alcohol {
+  display: flex;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .alcohol {
+    flex-direction: column;
+  }
+}
+.cuisinecontainer .alcohol__image {
+  width: 50%;
+  max-height: 500px;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .alcohol__image {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+}
+.cuisinecontainer .alcohol__image img {
+  width: 100%;
+}
+.cuisinecontainer .alcohol__text {
+  text-align: center;
+  align-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 40%;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .alcohol__text {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+.cuisinecontainer .alcohol__text h3 {
+  font-size: 4em;
+  margin-top: 25px;
+  margin-bottom: 70px;
+}
+@media screen and (max-width: 800px) {
+  .cuisinecontainer .alcohol__text h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 3em;
+  }
+}
+.cuisinecontainer .alcohol__text p {
+  font-size: 1.8em;
+  text-align: center;
+}
+@media screen and (max-width: 550px) {
+  .cuisinecontainer .alcohol__text p {
+    font-size: 1.4em;
+  }
+}
+
+footer {
+  padding-top: 100px;
+  margin-top: 100px;
+  background-color: #131518;
+}
+footer .breadth .map {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 20px;
+}
+footer .breadth .map iframe {
+  width: 100%;
+  height: 100%;
+}
+footer .detailedview p {
+  font-size: 1.2em;
+}
+footer .detailedview p:first-child {
+  margin-bottom: 20px;
+}
+footer .detailedview p:nth-child(2) {
+  margin-bottom: 20px;
+}
+footer .detailedview__list {
+  margin-bottom: 100px;
+  font-size: 1.2em;
+  display: flex;
+}
+@media screen and (max-width: 800px) {
+  footer .detailedview__list {
+    flex-wrap: wrap;
+  }
+}
+footer .detailedview__list li {
+  list-style: none;
+  width: 50%;
+}
+@media screen and (max-width: 800px) {
+  footer .detailedview__list li {
+    margin-bottom: 20px;
+  }
+}
+footer .detailedview__list li a {
+  text-decoration: none;
+  color: white;
+}
+footer .detailedview__sns {
+  margin-bottom: 50px;
+  font-size: 3em;
+  display: flex;
+  justify-content: space-around;
+}
+footer .detailedview__sns li {
+  max-width: 25px;
+  max-height: 25px;
+  list-style: none;
+}
+footer .detailedview__sns li img {
+  width: 100%;
+  height: 100%;
+}
+footer small {
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */

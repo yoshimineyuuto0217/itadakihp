@@ -1,0 +1,316 @@
+@use 'common';
+@use 'mixin' as m;
+
+header {
+    position: relative;
+    margin-bottom: 100px;
+
+    .right-col {
+        background-color: black;
+        position: fixed;
+        display: flex;
+        left: 5%;
+        bottom: 5%;
+        z-index: 500;
+        font-size: 2em;
+        p{
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+        p:first-child{
+            border-right: 1px solid white;
+        }
+        p:last-child:hover{
+            color: #AC881B;
+            cursor: pointer;
+        }
+    }
+    .rap {
+        padding: 1%;
+        width: 100vw;
+        position: fixed;
+        align-items: center;
+        z-index: 240;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+
+        .smalllogo {
+            max-width: 100px;
+            max-height: 100px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        nav {
+            @include m.sp {
+                display: none;
+            }
+
+            ul {
+                font-size: 2em;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                height: 100px;
+
+                li {
+                    list-style: none;
+                    margin-left: 20px;
+                    font-size: 1.2em;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                    a:hover {
+                        color: #AC881B;
+                    }
+                }
+
+                li:last-child {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    .logo {
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 200;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .opaque {
+        // background-color: rgba(0, 0, 0, 0.5);
+        background-color: black;
+        opacity: 0.6;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        z-index: 120;
+    }
+
+
+
+    // vegas.jsの設定してます
+    #vegas{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    #guestroom {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    #cuisine {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .facility_visal{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // 画像をカバーにすることで切り抜きを防ぎます
+            object-position: top;
+        }
+    }
+
+    .facility {
+        font-size: 10em;
+        display: inline-block;
+        position: absolute;
+        z-index: 130;
+        text-orientation: upright;
+        writing-mode: vertical-rl;
+        top:50%;
+        transform: translateY(-50%);
+        right: 3%;
+        letter-spacing:30px;
+        @include m.sp {
+            top: 30%;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+
+    .facility::after {
+        margin-top: 50px;
+        content: "";
+        width: 1px;
+        height: 200px;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        top: 80%;
+        right: 50%;
+        transform: translateX(-50%);
+        animation: faciltyanime 3s infinite ;
+    }
+}
+
+@keyframes faciltyanime {
+    from {
+        height: 0px;
+    }
+    to{
+        height: 200px;
+    }
+}
+// これはハンバーかメニューの設定です
+.dark {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    position: fixed;
+    z-index: 230;
+    display: none; 
+}
+
+.dark.active { 
+    display: block; /* クラスが付いたときに表示 */
+}
+
+.spannavi {
+    text-align: center;
+    font-size: 1.9em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    transition: transform 2s ease-in;
+    display: none;
+}
+.active.spannavi{
+    display: block;
+}
+
+
+.spannavi ul {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.spannavi ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.spannavi ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.spannavi ul li::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 10%;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    background-color: white;
+}
+
+.spannavi ul li::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 10%;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    background-color: white;
+}
+
+// .view {
+//     display: block;
+// }
+
+button {
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 90vw;
+    color: #AC881B;
+    border: 1px solid white;
+}
+
+
+.hamburger {
+    position: fixed;
+    z-index: 250;
+    top: 7%;
+    right: 5%;
+    width: 35px;
+    height: 35px;
+    display: none;
+
+    @include m.sp {
+        display: block;
+    }
+}
+
+.hamburger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    border-radius: 4px;
+    display: inline-block;
+    transition: all .5s;
+    box-sizing: border-box;
+    transition: 2 ease-in;
+
+}
+
+.hamburger span:first-child {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 50%
+}
+
+.hamburger span:last-child {
+    bottom: 0;
+}
+
+
+.hamburger.active span:first-child {
+    -webkit-transform: translateY(15px) rotate(-310deg);
+    transform: translateY(15px) rotate(-310deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+
+.hamburger.active span:last-child {
+    -webkit-transform: translateY(-19.5px) rotate(310deg);
+    transform: translateY(-19.5px) rotate(310deg);
+}

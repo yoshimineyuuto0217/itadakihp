@@ -1,0 +1,210 @@
+@use 'mixin' as m;
+
+.guestroomtitle {
+    @include m.h2size;
+    @include m.sp {
+        margin-bottom: 150px;
+    }
+}
+
+.guestroomtitle::after {
+    @include m.h2after
+}
+
+.guestroomtitle::before {
+    @include m.h2before
+}
+
+.guestroomcontainer {
+    .humoto {
+        margin-bottom: 100px;
+        position: relative;
+
+
+        &__inner {
+            // height: 400px;
+            width: 100%;
+            display: flex;
+            position: relative;
+            &--image {
+                // position: absolute;
+                // top: 0;
+                opacity: 0;
+                transition: opacity 5s ease, transform 5s ease;
+                transform: translateX(-200px);
+
+                visibility: hidden;
+                z-index: 10;
+                width: 70%;
+                height: 60%;
+                margin-bottom: 400px;
+
+                @include m.tab {
+                    width: 100%;
+                    margin-bottom: 350px;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &--photo{
+                // position: absolute;
+                // top: 0;
+                opacity: 0;
+                transition: opacity 5s ease, transform 5s ease;
+                transform: translateX(-200px);
+
+                visibility: hidden;
+                z-index: 10;
+                width: 70%;
+                height: 60%;
+                margin-bottom: 400px;
+
+                @include m.tab {
+                    width: 100%;
+                    margin-bottom: 350px;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &--picture{
+                // position: absolute;
+                // top: 0;
+                opacity: 0;
+                transition: opacity 5s ease, transform 5s ease;
+                transform: translateX(-200px);
+
+                visibility: hidden;
+                z-index: 10;
+                width: 70%;
+                height: 60%;
+                margin-bottom: 400px;
+
+                @include m.tab {
+                    width: 100%;
+                    margin-bottom: 350px;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .is-active {
+                /*要素を表示させる*/
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+              }
+            &--text {
+                width: 100%;
+                position: absolute;
+                top: 20%;
+
+                // right:0;
+                @include m.tab {
+                    width: 100%;
+                    height: 50%;
+                    top: -10%;
+                    left: 0;
+                    // right: 0;
+                    // margin: 0 auto;
+                    // right: 50%;
+                    // transform: translateX(50%);
+                }
+
+                img {
+                    width: 45%;
+                    position: absolute;
+                    right: 0;
+
+                    @include m.tab {
+                        width: 100%;
+                        height: 70%;
+                    }
+                }
+            }
+
+            &--description {
+                position: absolute;
+                display: flex;
+                align-items: end;
+                justify-content: space-between;
+                width: 100%;
+                bottom: 0;
+                right: 0;
+
+                @include m.tab {
+                    flex-direction: column
+                }
+
+                &-d {
+                    @include m.tab {
+                        width: 100%;
+                        margin-bottom: 50px;
+                        font-size: 0.85em;
+                    }
+
+                    h3 {
+                        @include m.h3size;
+                    }
+                    .itadaki::after {
+                        margin-left: 20px;
+                        content: "いただき";
+                        display: inline;
+                        font-size: 0.5em;
+                    }
+                    .touge::after {
+                        margin-left: 20px;
+                        content: "とうげ";
+                        display: inline;
+                        font-size: 0.5em;
+                    }
+                    .humoto::after {
+                        margin-left: 20px;
+                        content: "ふもと";
+                        display: inline;
+                        font-size: 0.5em;
+                    }
+                    p {
+                        font-size: 1.9em;
+
+                        @include m.tab {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+                &-booking {
+                    width: 300px;
+                    cursor: pointer;
+                    @include m.tab {
+                        width: 100%;
+                        margin-bottom: 50px;
+                    }
+
+                    p {
+                        color: #AC881B;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        text-align: center;
+                        width: 100%;
+                        border: 1px solid white;
+                        font-size: 2em;
+
+                    }
+                }
+                &-booking:hover {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+}
+

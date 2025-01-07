@@ -1,0 +1,174 @@
+$lg: 1500px;
+$tab: 800px;
+$sp: 550px;
+$xs: 400px;
+@mixin tab {
+    @media screen and (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width: $sp) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media screen and (max-width: $xs) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (min-width: $lg) {
+        @content;
+    }
+}
+
+@mixin h2size {
+    margin: 2%;
+    max-width: 350px;
+    font-size: 5em;
+    margin: 0 auto;
+    display: flex;
+    /* 子要素の整列を簡単にする */
+    align-items: center;
+    /* 垂直方向の中央揃え */
+    justify-content: center;
+    /* 必要に応じてテキストを中央揃え */
+    position: relative;
+    color: #AC881B;
+    margin-bottom: 200px;
+
+    @include tab {
+        font-size: 3em;
+        margin-bottom: 100px;
+    }
+
+    @include sp{
+        margin-bottom: 50px;
+    }
+}
+
+@mixin h2before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 10%;
+    height: 1px;
+    background-color: white;
+}
+
+@mixin h2after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 10%;
+    height: 1px;
+    background-color: white;
+}
+
+@mixin secondtitle {
+    max-width: 700px;
+    font-size: 5em;
+    margin: 0 auto;
+    display: flex;
+    /* 子要素の整列を簡単にする */
+    align-items: center;
+    /* 垂直方向の中央揃え */
+    justify-content: center;
+    /* 必要に応じてテキストを中央揃え */
+    position: relative;
+    color: #AC881B;
+    margin-bottom: 100px;
+    @include tab {
+        font-size: 3em;
+    }
+    @include sp {
+        font-size: 2.7em;
+    }
+}
+
+@mixin h3size {
+    font-size: 4em;
+    margin-top: 25px;
+    margin-bottom: 70px;
+    // margin-top: 100px;
+    // margin-bottom: 100px;
+    @include tab {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 3em;
+    }
+}
+
+@mixin indextitle {
+    width: 5%;
+    height: 400px;
+    font-size: 5em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    @include tab {
+        font-size: 4em;
+    }
+    @include sp{
+        width: 90%;
+                height: auto;
+                writing-mode: horizontal-tb; 
+                font-size: 2.9em;
+    }
+}
+
+// @mixin indextitleafter {
+//     content: "";
+//     display: inline-block;
+//     position: absolute;
+//     bottom: 0;
+//     right: 50%;
+//     // transform: translateX(-50%);
+//     width: 1px;
+//     height: 70px;
+//     background-color: white;
+//     @include tab {
+//         bottom: 5%;
+//     }
+//     @include sp {
+//         width: 10%;
+//         height: 1px;
+//         right: 10%;
+//         bottom: 50%;
+//         transform: translateY(50%);
+//     }
+// }
+
+
+// @mixin indextitlebefor {
+//     content: "";
+//     display: inline-block;
+//     position: absolute;
+//     top: 0;
+//     right: 50%;
+//     transform: translateX(-50%);
+//     width: 1px;
+//     height: 70px;
+//     background-color: white;
+//     @include tab {
+//         top: 5%;
+//     }
+//     @include sp {
+//         width: 10%;
+//         height: 1px;
+//         top:50%;
+//         transform: translateX(-50%);
+//         right: none;
+//         left: 10%;
+//     }
+// }

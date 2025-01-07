@@ -1,0 +1,374 @@
+@use 'mixin' as m;
+
+
+.cuisinecontainer {
+    margin-bottom: 200px;
+
+    .title {
+        @include m.h2size;
+    }
+
+    .title::before {
+        @include m.h2before
+    }
+
+    .title::after {
+        @include m.h2after
+    }
+
+    .secondtitle {
+        @include m.secondtitle;
+    }
+
+    .secondtitle::before {
+        @include m.h2before
+    }
+
+    .secondtitle::after {
+        @include m.h2after
+    }
+
+    .breakfast {
+        position: relative;
+        margin-bottom: 300px;
+        max-height: 900px;
+
+        @include m.tab {
+            margin-bottom: 200px;
+        }
+
+        @include m.xs {
+            margin-bottom: 0px;
+        }
+
+        @include m.lg {
+            margin-bottom: calc(50px + 550px);
+        }
+
+
+        &__back {
+            width: 65vw; // 画面幅の50%を基準に設定
+            aspect-ratio: 1 / 1; // 幅と高さを1:1に設定（正円を維持）
+            border-radius: 50%; // 正円にする
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+            left: 50%;
+            top: 8%;
+            filter: blur(3px);
+            transform: translateX(-50%);
+
+            @include m.tab {
+                top: 40%;
+                // transform: translateY(-50%);
+                // transform: translateX(-50%);
+            }
+
+            @include m.xs {
+                top: 30%;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.5;
+            }
+        }
+
+        &__inner {
+            width: 55%;
+            height: 50%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+
+            @include m.tab {
+                width: 90%;
+                position: relative;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                margin-bottom: 50px;
+            }
+
+        }
+
+        &__fish {
+            width: 55%;
+            height: 50%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+
+            @include m.tab {
+                width: 90%;
+                position: relative;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                margin-bottom: 50px;
+            }
+
+        }
+
+        &__pork {
+            width: 55%;
+            height: 50%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+
+            @include m.tab {
+                width: 90%;
+                position: relative;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                margin-bottom: 50px;
+            }
+
+        }
+
+        .is-active {
+            opacity: 1;
+        }
+
+        &__out {
+            display: flex;
+            max-height: 50%;
+
+            @include m.tab {
+                display: block;
+            }
+
+            &--text {
+                text-align: center;
+                // border:  1px solid red;
+                // align-items: end;
+                align-content: center;
+                width: 41%;
+                margin-right: 2%;
+                margin-left: 2%;
+
+                @include m.tab {
+                    width: 100%;
+                    margin-left: 0%;
+                    margin-right: 0%;
+                    margin-bottom: 20px;
+                }
+
+                @include m.sp {
+                    margin-bottom: 50px;
+                }
+
+                @include m.xs {
+                    margin-bottom: 100px;
+                }
+
+                h3 {
+                    @include m.h3size;
+
+                    @include m.tab {
+                        width: 70%;
+                    }
+
+                    @include m.sp {
+                        font-size: 3.3em;
+                    }
+
+                    @include m.xs {
+                        font-size: 2.7em;
+                    }
+                }
+
+                p {
+                    font-size: 1.8em;
+                    text-align: center;
+
+                    // 文字に幅さわらないおかしくなる
+                    @include m.tab {
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+
+                    @include m.sp {
+                        width: 70%;
+                        font-size: 1.4em;
+                    }
+                }
+            }
+
+            &--image {
+                width: 55%;
+                height: 100%;
+                vertical-align: bottom;
+                opacity: 0;
+                transition: opacity 1.5s ease-in-out;
+
+                @include m.tab {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 40%;
+                    height: 30%;
+                }
+
+                @include m.sp {
+                    position: absolute;
+                    top: 40%;
+                    right: 0;
+                    width: 40%;
+                }
+
+                @include m.xs {
+                    top: 25%;
+                }
+
+                img {
+
+                    width: 100%;
+                    height: 100%;
+                    margin-top: 50px;
+
+                    @include m.tab {
+                        margin-top: 0px;
+                    }
+                }
+            }
+
+            &--pork {
+                width: 55%;
+                height: 100%;
+                vertical-align: bottom;
+                opacity: 0;
+                transition: opacity 1.5s ease-in-out;
+
+                @include m.tab {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 40%;
+                    height: 30%;
+                }
+
+                @include m.sp {
+                    position: absolute;
+                    top: 40%;
+                    right: 0;
+                    width: 40%;
+                }
+
+                @include m.xs {
+                    top: 25%;
+                }
+
+                img {
+
+                    width: 100%;
+                    height: 100%;
+                    margin-top: 50px;
+
+                    @include m.tab {
+                        margin-top: 0px;
+                    }
+                }
+            }
+
+            &--fish {
+                width: 55%;
+                height: 100%;
+                vertical-align: bottom;
+                opacity: 0;
+                transition: opacity 1.5s ease-in-out;
+
+                @include m.tab {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 40%;
+                    height: 30%;
+                }
+
+                @include m.sp {
+                    position: absolute;
+                    top: 40%;
+                    right: 0;
+                    width: 40%;
+                }
+
+                @include m.xs {
+                    top: 25%;
+                }
+
+                img {
+
+                    width: 100%;
+                    height: 100%;
+                    margin-top: 50px;
+
+                    @include m.tab {
+                        margin-top: 0px;
+                    }
+                }
+            }
+
+            .is-active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .alcohol {
+        display: flex;
+
+        @include m.tab {
+            flex-direction: column;
+        }
+
+        &__image {
+            width: 50%;
+            max-height: 500px;
+
+            @include m.tab {
+                width: 100%;
+                margin-bottom: 100px;
+            }
+
+            img {
+                width: 100%;
+                // height: 100%;
+            }
+        }
+
+        &__text {
+            text-align: center;
+            align-content: center;
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 40%;
+
+            @include m.tab {
+                width: 100%;
+                margin-left: 0%;
+                margin-right: 0%;
+            }
+
+            h3 {
+                @include m.h3size;
+            }
+
+            p {
+                font-size: 1.8em;
+                text-align: center;
+
+                @include m.sp {
+                    font-size: 1.4em;
+                }
+            }
+        }
+    }
+}

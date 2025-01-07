@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="icon" href="assets/svg/ロゴいただき.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="vegas/vegas.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/humbuger.js" async></script>
+    <script src="js/bgm.js" async></script>
+    <script script type="text/javascript" src="vegas/vegas.min.js"></script>
+    <script script type="text/javascript" src="vegas/cusine.js"></script>
+    <title>料理紹介</title>
+  </head>
+  <body>
+    <header>
+      <div class="right-col">
+        <p>BGM</p>
+        <p id="icon">ON</p>
+      </div>
+      <div class="opaque"></div>
+      <div class="dark" id="kuro"></div>
+      <div class="spannavi" id="sn">
+        <ul>
+            <li><a href="index.html">はじめに</a></li>
+            <li><a href="guestroom.html">客室</a></li>
+            <li><a href="cuisine.html">料理</a></li>
+            <li><a href="facility.html">施設</a></li>
+        </ul>
+        <button>予約はこちらから</button>
+    </div>
+      <div class="hamburger" id="hum"><span></span><span></span><span></span></div>
+      <div class="rap">
+        <div class="smalllogo">
+          <a href="index.html"><img src="assets/svg/ロゴいただき.svg" alt="旅館「嶺」" /></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="guestroom.html">客室</a></li>
+            <li><a href="cuisine.html">料理</a></li>
+            <li><a href="facility.html">施設</a></li>
+            <li><a href="index.html">予約はこちら</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="facility_visal" id="cuisine">
+        <!-- <img src="assets/images/料理.jpeg" alt="施設紹介画面" /> -->
+      </div>
+      <p class="facility">料理</p>
+      <audio id="mySong" loop>
+        <source src="audio/japanese-lo-fi-kamitourou.mp3" type="audio/mp3" />
+      </audio>
+    </header>
+    <main>
+      <div class="cuisinecontainer breadth">
+        <h2 class="title">朝食</h2>
+        <section class="breakfast">
+          <div class="breakfast__back">
+            <img src="assets/images/桜島.jpeg" alt="" />
+          </div>
+          <div class="breakfast__inner">
+            <img src="assets/images/バイキング1.jpeg" alt="" />
+          </div>
+          <div class="breakfast__out">
+            <div class="breakfast__out--text">
+                <h3>バイキング</h3>
+              <p>
+                当館では、新鮮な地元食材を使った
+                和食中心の朝食バイキングをご用意。 焼き魚や味噌汁、漬物などを
+                お好きなだけお楽しみください。
+              </p>
+            </div>
+            <div class="breakfast__out--image">
+              <img src="assets/images/バイキング2.jpeg" alt="" />
+            </div>
+          </div>
+        </section>
+        <h2 class="title">夕食</h2>
+        <section class="breakfast">
+          <div class="breakfast__back">
+            <img src="assets/images/夕日.png" alt="" />
+          </div>
+          <div class="breakfast__pork ">
+            <img src="assets/images/肉1.jpeg" alt="" />
+          </div>
+          <div class="breakfast__out">
+            <div class="breakfast__out--text">
+              <h3>肉コース</h3>
+              <p>
+                当館では、新鮮な地元食材を使った
+                和食中心の朝食バイキングをご用意。 焼き魚や味噌汁、漬物などを
+                お好きなだけお楽しみください。
+              </p>
+            </div>
+            <div class="breakfast__out--pork ">
+              <img src="assets/images/肉2.jpeg" alt="" />
+            </div>
+          </div>
+        </section>
+        <section class="breakfast">
+          <div class="breakfast__back">
+            <img src="assets/images/燈.jpg" alt="" />
+          </div>
+          <div class="breakfast__fish">
+            <img src="assets/images/魚2.jpeg" alt="" />
+          </div>
+          <div class="breakfast__out">
+            <div class="breakfast__out--text">
+              <h3>魚コース</h3>
+              <p>
+                当館では、新鮮な地元食材を使った
+                和食中心の朝食バイキングをご用意。 焼き魚や味噌汁、漬物などを
+                お好きなだけお楽しみください。
+              </p>
+            </div>
+            <div class="breakfast__out--fish">
+              <img src="assets/images/魚1.jpeg" alt="" />
+            </div>
+          </div>
+        </section>
+        <h2 class="secondtitle">おすすめのお酒</h2>
+        <section class="alcohol">
+          <div class="alcohol__image">
+            <img src="assets/images/お酒.jpeg" alt="" />
+          </div>
+          <div class="alcohol__text">
+            <h3>さくらじま</h3>
+            <p>
+              フルーティで華やかな香りの芋焼酎。 まろやかな口当たりと
+              深い余韻が楽しめ、 ロック・水割り・お湯割り どれも最適です。
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+        <div class="breadth">
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.8307338788136!2d130.5391404757618!3d31.58368927418515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e6745b0189d3b%3A0x9f6c9b15d696dd2f!2z6bm_5YWQ5bO25Lit5aSu6aeF!5e0!3m2!1sja!2sjp!4v1735623557357!5m2!1sja!2sjp"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="detailedview">
+                  <p>〒890-0053 鹿児島県鹿児島市中央町１−１</p>
+                  <p>Tel:xxx-xxxx-xxxx</p>
+                  <ul class="detailedview__list">
+                      <li><a href="">お問い合わせ</a></li>
+                      <li><a href="">質問</a></li>
+                      <li><a href="">プライバシーポリシー</a></li>
+                      <li><a href="">パンフレット</a></li>
+                  </ul>
+                  <ul class="detailedview__sns">
+                      <li><img src="assets/svg/facebook-3-2.svg" alt=""></li>
+                      <li><img src="assets/svg/x-2 (1).svg" alt=""></li>
+                      <li><img src="assets/svg/instagram-2016-5 (1).svg" alt=""></li>
+                  </ul>
+          </div>
+          <small>&copy;ITADAKI</small>
+        </div>
+      </footer>
+      <script src="js/humbuger.js" async></script>
+      <script src="js/fadeup.js" async></script>
+  </body>
+</html>

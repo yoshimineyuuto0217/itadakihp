@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="icon" href="assets/svg/ロゴいただき.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="vegas/vegas.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/humbuger.js" async></script>
+    <script script type="text/javascript" src="vegas/vegas.min.js"></script>
+    <script script type="text/javascript" src="vegas/function.js"></script>
+    <script script type="text/javascript" src="js/bgm.js" async></script>
+    <title>旅館「嶺」</title>
+  </head>
+  <body>
+    <header>
+      <div class="right-col">
+        <p>BGM</p>
+        <p id="icon">ON</p>
+      </div>
+      <div class="logo">
+        <img src="assets/svg/ロゴいただき.svg" alt="" />
+      </div>
+      <div class="opaque"></div>
+      <div class="dark" id="kuro"></div>
+      <div class="spannavi" id="sn">
+        <ul>
+          <li><a href="index.html">はじめに</a></li>
+          <li><a href="guestroom.html">客室</a></li>
+          <li><a href="cuisine.html">料理</a></li>
+          <li><a href="facility.html">施設</a></li>
+        </ul>
+        <button>予約はこちらから</button>
+      </div>
+      <div class="hamburger" id="hum">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="rap">
+        <div class="smalllogo">
+          <a href="index.html"
+            ><img src="assets/svg/ロゴいただき.svg" alt="旅館「嶺」"
+          /></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="guestroom.html">客室</a></li>
+            <li><a href="cuisine.html">料理</a></li>
+            <li><a href="facility.html">施設</a></li>
+            <li><a href="index.html">予約はこちら</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="facility_visal" id="vegas">
+        <!-- <img src="assets/images/メイン.jpeg" alt="施設紹介画面" /> -->
+      </div>
+      <audio id="mySong" loop>
+        <source src="audio/japanese-lo-fi-kamitourou.mp3" type="audio/mp3" />
+      </audio>
+    </header>
+    <main>
+      <div class="indexcontainer">
+        <section class="origin breadth">
+          <p class="indextext">
+            桜島の雄大な自然を背景に、<br />和の美を追求した 和宿 嶺<br />静寂と心安らぐ空間を提供します<br />旅館全体に鹿児島の伝統文化や工芸<br />を取り入れ、四季折々の風景と共に<br />贅沢なひとときをお過ごしい
+            ただけます<br />露天風呂では 桜島の絶景を一望し、<br />地元食材をふんだんに使用した
+            創作和食で<br />創作和食で、おもてなしいたし ます<br />日常を忘れ、心ゆくまで癒される<br />特別な時間をご堪能ください
+          </p>
+          <h2 class="indextitle">はじめに</h2>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="breadth">
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.8307338788136!2d130.5391404757618!3d31.58368927418515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e6745b0189d3b%3A0x9f6c9b15d696dd2f!2z6bm_5YWQ5bO25Lit5aSu6aeF!5e0!3m2!1sja!2sjp!4v1735623557357!5m2!1sja!2sjp"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="detailedview">
+          <p>〒890-0053 鹿児島県鹿児島市中央町１−１</p>
+          <p>Tel:xxx-xxxx-xxxx</p>
+          <ul class="detailedview__list">
+            <li><a href="">お問い合わせ</a></li>
+            <li><a href="">質問</a></li>
+            <li><a href="">プライバシーポリシー</a></li>
+            <li><a href="">パンフレット</a></li>
+          </ul>
+          <ul class="detailedview__sns">
+            <li><img src="assets/svg/facebook-3-2.svg" alt="" /></li>
+            <li><img src="assets/svg/x-2 (1).svg" alt="" /></li>
+            <li><img src="assets/svg/instagram-2016-5 (1).svg" alt="" /></li>
+          </ul>
+        </div>
+        <small>&copy;ITADAKI</small>
+      </div>
+    </footer>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/humbuger.js" async></script>
+    <script script type="text/javascript"  src="vegas/vegas.min.js"></script>
+    <script script type="text/javascript"  src="vegas/function.js"></script> -->
+  </body>
+</html>

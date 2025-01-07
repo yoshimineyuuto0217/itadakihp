@@ -1,0 +1,69 @@
+@use 'mixin'as m;
+
+footer {
+    padding-top: 100px;
+    margin-top: 100px;
+    background-color: #131518;
+    .breadth{
+        .map{
+            width: 100%;
+            height: 500px;
+            margin-bottom: 20px;
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .detailedview{
+        p{
+            font-size: 1.2em;
+        }
+        p:first-child {
+            margin-bottom: 20px;
+        }
+        p:nth-child(2){
+            margin-bottom: 20px;
+        }
+        &__list{
+            margin-bottom: 100px;
+            font-size: 1.2em;
+            display: flex;
+            @include m.tab {
+                flex-wrap: wrap;
+            }
+
+            li{
+                list-style: none;
+                width: 50%;
+                @include m.tab {
+                    margin-bottom: 20px;
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+        &__sns{
+            margin-bottom: 50px;
+            font-size: 3em;
+            display: flex;
+            justify-content:space-around;
+            li{
+                max-width: 25px;
+                max-height: 25px;
+                list-style: none;
+                img {
+                    width: 100%;
+                    height:100%;
+                }
+            }
+        }
+    }
+    small {
+        letter-spacing: 3px;
+        display: flex;
+        justify-content: center;
+    }
+}
