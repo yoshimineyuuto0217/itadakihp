@@ -1,9 +1,9 @@
 $(function() {
     $('#cuisine').vegas({
         slides: [
-            { src: '../assets/images/shabu.jpeg'} ,
-            { src: '../assets/images/fish.jpeg' },
-            { src: '../assets/images/sashimi.jpeg' }
+            { src: 'assets/images/shabu.jpeg'} ,
+            { src: 'assets/images/fish.jpeg' },
+            { src: 'assets/images/sashimi.jpeg' }
         ],
         // overlay: '../vegas/overlays/桜島.jpeg', //フォルダ『overlays』の中からオーバーレイのパターン画像を選択
         transition: 'fade', //スライドを遷移させる際のアニメーション
