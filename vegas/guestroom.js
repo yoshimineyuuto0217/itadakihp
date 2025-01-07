@@ -1,9 +1,9 @@
 $(function() {
     $('#guestroom').vegas({
         slides: [
-            { src: '../vegas/overlays/客室.webp' },
-            { src: '../vegas/overlays/麓.webp' },
-            { src: '../vegas/overlays/客室3.webp' }
+            { src: '../assets/images/room.webp' },
+            { src: '../assets/images/mountain.webp' },
+            { src: '../assets/images/race.webp' }
         ],
         // overlay: '../vegas/overlays/桜島.jpeg', //フォルダ『overlays』の中からオーバーレイのパターン画像を選択
         transition: 'fade', //スライドを遷移させる際のアニメーション
