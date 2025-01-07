@@ -1,8 +1,8 @@
 $(function() {
     $('#vegas').vegas({
         slides: [
-            { src: '../vegas/overlays/index.jpeg' },
-            { src: '../vegas/overlays/sakura.jpeg' }
+            { src: '../assets/images/index.jpeg' },
+            { src: '../assets/images/sakurazima.jpeg' }
         ],
         // overlay: '../vegas/overlays/桜島.jpeg', //フォルダ『overlays』の中からオーバーレイのパターン画像を選択
         transition: 'fade', //スライドを遷移させる際のアニメーション
