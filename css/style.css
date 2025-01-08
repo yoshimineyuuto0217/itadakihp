@@ -4,8 +4,18 @@ body {
   font-family: "Zen Old Mincho", serif;
   color: white;
   background: url(../assets/images/japanese-paper_00334.jpg);
-  background-color: rgba(0, 0, 0, 0.9);
-  background-blend-mode: overlay;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* 暗い色を重ねる */
+  z-index: -1;
 }
 
 .breadth {
