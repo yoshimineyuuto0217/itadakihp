@@ -4,10 +4,10 @@ let icon = document.getElementById("icon");
 icon.onclick = function () {
     if (mySong.paused) {
         mySong.play();
-        icon.textContent= "OF";
+        icon.textContent= "停止";
     } else {
         mySong.pause();
-        icon.textContent = "ON";
+        icon.textContent = "再生";
     }
 }
 
