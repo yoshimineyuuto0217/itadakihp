@@ -23,9 +23,15 @@ body::before {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8); /* 暗い色を重ねる */
     z-index: -1;
+    pointer-events: none;
 }
 .breadth {
     width: 90%;
     margin: 0 auto;
 }
 
+@media (max-width: 550px) {
+    body {
+        background-color: rgba(0, 0, 0, 0.95); /* スマホ用に暗さを強調 */
+    }
+}
