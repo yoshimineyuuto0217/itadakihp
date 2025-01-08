@@ -24,7 +24,12 @@ header {
             color: #AC881B;
             cursor: pointer;
         }
+        
     }
+    .vanish {
+       display: none;
+    }
+    
     .rap {
         padding: 1%;
         width: 100vw;

@@ -107,6 +107,10 @@ $xs: 400px;
         margin-bottom: 20px;
         font-size: 3em;
     }
+    @include sp {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
 }
 
 @mixin indextitle {

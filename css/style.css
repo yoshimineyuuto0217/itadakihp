@@ -3,7 +3,9 @@ body {
   font-size: 62.5%;
   font-family: "Zen Old Mincho", serif;
   color: white;
-  background-color: black;
+  background: url(../assets/images/japanese-paper_00334.jpg);
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: overlay;
 }
 
 .breadth {
@@ -34,6 +36,9 @@ header .right-col p:first-child {
 header .right-col p:last-child:hover {
   color: #AC881B;
   cursor: pointer;
+}
+header .vanish {
+  display: none;
 }
 header .rap {
   padding: 1%;
@@ -686,6 +691,12 @@ button {
     font-size: 3em;
   }
 }
+@media screen and (max-width: 550px) {
+  .guestroomcontainer .humoto__inner--description-d h3 {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
 .guestroomcontainer .humoto__inner--description-d .itadaki::after {
   margin-left: 20px;
   content: "いただき";
@@ -980,6 +991,12 @@ button {
     font-size: 3em;
   }
 }
+@media screen and (max-width: 550px) {
+  .cuisinecontainer .breakfast__out--text h3 {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 800px) {
   .cuisinecontainer .breakfast__out--text h3 {
     width: 70%;
@@ -1176,6 +1193,12 @@ button {
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 3em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .cuisinecontainer .alcohol__text h3 {
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 }
 .cuisinecontainer .alcohol__text p {
